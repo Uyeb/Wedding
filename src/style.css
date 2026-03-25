@@ -1,0 +1,333 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #ddd; /* nền ngoài */
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== MOBILE WRAPPER ===== */
+.app-bg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-wrapper {
+  width: 100%;
+  max-width: 420px; /* cố định mobile */
+  background: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* PC nhìn như app */
+@media (min-width: 768px) {
+  .mobile-wrapper {
+    margin: 20px 0;
+    
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+  }
+}
+
+/* ===== GLOBAL ===== */
+.section {
+  padding: 50px 15px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 5px 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 800px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* ảnh full */
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 !important;
+}
+
+/* ===== TÊN TRÊN ===== */
+.names {
+  position: absolute;
+  top: 50px; /* chỉnh cao thấp tại đây */
+  width: 100%;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 34px;
+  color: #312e2e;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(194, 186, 186, 0.5);
+}
+/* ===== BOX DƯỚI ===== */
+.hero-content {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* box nội dung */
+.invite {
+  /* background: rgba(255,255,255,0.75);
+  display: inline-block; */
+  padding: 15px 0;
+  display: block;
+  width: 100%;
+  /* border-radius: 10px; */
+  /* backdrop-filter: blur(4px); */
+}
+
+/* line */
+.line {
+  height: 1px;
+  width: 210px;
+  background: #000;
+  margin: 15px auto;
+}
+
+/* ngày */
+.invite h2 {
+  letter-spacing: 4px;
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+/* ===== INFO (nhà trai / gái) ===== */
+.section h2 {
+  font-family: 'Dancing Script';
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #444;
+}
+.section h4{
+    margin-top: 40%;
+}
+.name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+  margin-top: 5px;
+  color: #444;
+}
+
+/* BOX nền hồng */
+.img-box-pink {
+  padding: 10px; /* cách layout 10px */
+  background: #7d5146; /* màu hồng */
+  border-radius: 2px;
+}
+
+/* chứa 2 ảnh */
+.img-inner {
+  display: flex;
+  gap: 4px; /* khoảng cách giữa 2 ảnh */
+}
+
+/* mỗi ảnh */
+.img-inner img {
+  width: 50%;
+  border-radius: 10px;
+  padding: 4px; /* khoảng cách xung quanh ảnh */
+}
+
+/* ===== EVENT INTRO (3 ảnh) ===== */
+.section img {
+  border-radius: 10px;
+}
+
+/* ===== CALENDAR & MAP ===== */
+.wedding-wrapper { max-width: 400px; margin: auto; text-align: center; background: #fff; padding: 20px; }
+
+/* Header nghệ thuật */
+.month-title { font-family: 'Dancing Script', cursive; font-size: 30px; color: #8d7665; margin-right: 10px; }
+.year-title { font-size: 60px; font-weight: bold; color: #8d7665; opacity: 0.6; }
+
+/* Calendar */
+.calendar-grid { border: 1px solid #e6e3e3; margin-top: 20px; }
+.weekdays { display: grid; grid-template-columns: repeat(7, 1fr); background: #8d7665; color: #fff; font-size: 10px; padding: 8px 0; }
+.days { display: grid; grid-template-columns: repeat(7, 1fr); }
+.day-item { height: 45px; display: flex; align-items: center; justify-content: center; border: 0.5px solid #fafafa; font-size: 14px; }
+.sunday, .special-date { color: #8d7665; font-weight: bold; }
+.special-date { color: #f5222d; position: relative; z-index: 2; }
+/* Container của ô ngày */
+.day-cell {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+  border-right: 1px solid #f0f0f0;
+}
+
+/* Khung chứa trái tim và số */
+.heart-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Icon trái tim làm nền */
+.heart-icon {
+  position: absolute;
+  font-size: 35px; /* Điều chỉnh kích thước trái tim */
+  color: #ff4d4f;
+  opacity: 0.25;
+  z-index: 1;
+  /* Nếu trái tim bị lệch lên xuống, dùng top/bottom để chỉnh */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Số nằm trên trái tim */
+.day-number {
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+  color: #d32f2f;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.sunday-text {
+  color: #8d7665;
+  font-weight: bold;
+}
+/* Hiệu ứng nhấp nháy cho trái tim */
+@keyframes blink {
+  0% { opacity: 0.1; }   /* Mờ nhất */
+  50% { opacity: 0.6; }  /* Sáng nhất */
+  100% { opacity: 0.1; } /* Quay lại mờ */
+}
+
+.blinking {
+  animation: blink 1.5s ease-in-out infinite; /* Lặp lại vô hạn */
+}
+
+/* Card địa điểm */
+.script-font { font-family: 'Dancing Script', cursive; font-size: 24px; margin: 30px 0 10px; }
+.address-card { background: #d1cfca !important; border-radius: 4px; }
+.title-home { letter-spacing: 4px; font-weight: bold; }
+.address-text { text-transform: uppercase; font-size: 12px; margin-bottom: 15px; }
+.map-frame { border: 3px solid #fff; border-radius: 2px; line-height: 0; }
+.btn-google { background: #8d94ab !important; border: none; margin-top: 15px; font-weight: bold; height: 40px; }
+
+/* ===== ALBUM ===== */
+.album-section {
+  padding: 20px;
+  max-width: 800px; /* Độ rộng tối ưu */
+  margin: 0 auto;
+  background: #fff;
+}
+
+/* Header & Divider (giữ nguyên) */
+.album-header { text-align: center; margin-bottom: 25px; }
+.album-title { font-family: 'Dancing Script', cursive; font-style: italic; font-size: 26px; margin-bottom: 5px; }
+.title-divider { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.title-divider .line { height: 1px; width: 100px; background: #ddd; }
+.title-divider .heart { font-size: 10px; color: #333; }
+
+/* Box chứa ảnh */
+.img-box {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 1. Ảnh dọc chuẩn (Cột 12) */
+.vertical {
+  padding-top: 133.33%; /* Tỷ lệ 3:4 */
+}
+
+/* 2. Nhóm ảnh ngang bên phải (Cố định chiều cao bằng ảnh dọc bên trái) */
+.right-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+
+.horizontal {
+  /* Tính toán để 2 ảnh ngang + gap = 1 ảnh dọc */
+  padding-top: calc((133.33% - 12px) / 2);
+}
+
+/* 3. Ảnh to cuối cùng*/
+.full-vertical {
+  padding-top: 150%; /* Tỷ lệ dọc dài 2:3, bạn có thể chỉnh 133.33% nếu muốn ngắn hơn */
+}
+
+/* ===== FORM ===== */
+.ant-form {
+  max-width: 100%;
+  margin: auto;
+}
+
+/* ===== RESPONSIVE TEXT ===== */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .names {
+    font-size: 48px;
+  }
+
+  .invite h2 {
+    font-size: 24px;
+  }
+
+  iframe {
+    height: 320px;
+  }
+}
