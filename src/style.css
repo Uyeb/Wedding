@@ -54,78 +54,64 @@ p {
 img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+ 
 }
 
 /* ===== HERO ===== */
+/* 1. Loại bỏ khoảng trắng phía trên ảnh */
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
-  max-height: 800px;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0;      /* Đảm bảo không có padding */
+  line-height: 0;  /* Loại bỏ khoảng hở dòng của thẻ bao quanh ảnh */
 }
 
-/* ảnh full */
 .hero-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 0 !important;
+  height: auto;
+  display: block;
+  margin: 0;
+  /* Giữ hiệu ứng mờ đáy ảnh */
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 
-/* ===== TÊN TRÊN ===== */
-.names {
-  position: absolute;
-  top: 50px; /* chỉnh cao thấp tại đây */
-  width: 100%;
-  text-align: center;
-  font-family: 'Dancing Script', cursive;
-  font-size: 34px;
-  color: #312e2e;
-  margin: 0;
-  text-shadow: 0 2px 10px rgba(194, 186, 186, 0.5);
-}
-/* ===== BOX DƯỚI ===== */
+/* 2. Căn chỉnh lại vị trí và kiểu chữ */
 .hero-content {
   position: absolute;
-  bottom: 40px;
+  bottom: 5%;      /* Đẩy xuống thấp hơn (giảm từ 10% xuống 5%) */
+  left: 0;
   width: 100%;
   text-align: center;
-  padding: 0 20px;
+  z-index: 2;
+  line-height: 1.5; /* Reset lại line-height cho chữ dễ đọc */
 }
 
-/* box nội dung */
-.invite {
-  /* background: rgba(255,255,255,0.75);
-  display: inline-block; */
-  padding: 15px 0;
-  display: block;
-  width: 100%;
-  /* border-radius: 10px; */
-  /* backdrop-filter: blur(4px); */
+.names {
+  font-family: 'Allura', cursive;
+  font-size: 1.0rem;       /* Tăng kích thước tên (to hơn trước) */
+  color: #df4848;
+  margin: 0;
+  white-space: nowrap;     /* ÉP CHỮ TRÊN 1 HÀNG, không cho xuống dòng */
+  font-weight: 400;
+  white-space: nowrap;
 }
 
-/* line */
-.line {
-  height: 1px;
-  width: 210px;
-  background: #000;
-  margin: 15px auto;
-}
-
-/* ngày */
-.invite h2 {
-  letter-spacing: 4px;
-  font-size: 20px;
-  margin: 5px 0;
+/* 3. Dòng chữ nhỏ bên dưới */
+.hero-content p:not(.names) {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;       /* Nhỏ gọn so với tên */
+  letter-spacing: 4px;     /* Giãn cách rộng cho sang */
+  text-transform: uppercase;
+  color: #605f5f;
+  margin-top: 5px;         /* Khoảng cách giữa tên và dòng dưới */
 }
 
 /* ===== INFO (nhà trai / gái) ===== */
 .section h2 {
-  font-family: 'Dancing Script';
+  font-family: 'Allura', cursive;
   font-style: italic;
   font-size: 20px;
   line-height: 1.6;
@@ -135,7 +121,7 @@ img {
     margin-top: 40%;
 }
 .name {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Allura', cursive;
   font-size: 24px;
   margin-top: 5px;
   color: #444;
@@ -239,13 +225,57 @@ img {
   animation: blink 1.5s ease-in-out infinite; /* Lặp lại vô hạn */
 }
 
-/* Card địa điểm */
-.script-font { font-family: 'Dancing Script', cursive; font-size: 24px; margin: 30px 0 10px; }
-.address-card { background: #d1cfca !important; border-radius: 4px; }
-.title-home { letter-spacing: 4px; font-weight: bold; }
-.address-text { text-transform: uppercase; font-size: 12px; margin-bottom: 15px; }
-.map-frame { border: 3px solid #fff; border-radius: 2px; line-height: 0; }
-.btn-google { background: #8d94ab !important; border: none; margin-top: 15px; font-weight: bold; height: 40px; }
+/* Bổ sung cho Form để đồng bộ với Lịch */
+.confirm-section {
+  margin-top: 40px;
+}
+
+.confirm-text {
+  font-style: italic;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.form-container-box {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  text-align: left;
+}
+
+.custom-input {
+  border-radius: 20px !important;
+  padding: 10px 15px !important;
+}
+
+.custom-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.custom-submit-btn {
+  width: 100%;
+  height: 45px !important;
+  border-radius: 25px !important;
+  border: 1px solid #333 !important;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+/* Căn giữa Header Lịch */
+.header-artistic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* ===== ALBUM ===== */
 .album-section {
@@ -268,7 +298,7 @@ img {
   position: relative;
   overflow: hidden;
   background: #f5f5f5;
-  border-radius: 4px;
+  
 }
 
 .img-box img {
@@ -303,11 +333,6 @@ img {
   padding-top: 150%; /* Tỷ lệ dọc dài 2:3, bạn có thể chỉnh 133.33% nếu muốn ngắn hơn */
 }
 
-/* ===== FORM ===== */
-.ant-form {
-  max-width: 100%;
-  margin: auto;
-}
 
 /* ===== RESPONSIVE TEXT ===== */
 @media (min-width: 768px) {
