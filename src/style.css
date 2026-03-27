@@ -153,20 +153,23 @@ img {
 }
 
 /* ===== CALENDAR & MAP ===== */
-.wedding-wrapper { max-width: 400px; margin: auto; text-align: center; background: #fff; padding: 20px; }
+.wedding-wrapper { 
+  max-width: 400px; 
+  margin: auto; 
+  text-align: center; 
+  background: #fff; 
+  padding: 20px; 
+}
 
-/* Header nghệ thuật */
+/* Header */
+.header-artistic { display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
 .month-title { font-family: 'Dancing Script', cursive; font-size: 30px; color: #8d7665; margin-right: 10px; }
 .year-title { font-size: 60px; font-weight: bold; color: #8d7665; opacity: 0.6; }
 
-/* Calendar */
+/* Calendar Grid */
 .calendar-grid { border: 1px solid #e6e3e3; margin-top: 20px; }
 .weekdays { display: grid; grid-template-columns: repeat(7, 1fr); background: #8d7665; color: #fff; font-size: 10px; padding: 8px 0; }
 .days { display: grid; grid-template-columns: repeat(7, 1fr); }
-.day-item { height: 45px; display: flex; align-items: center; justify-content: center; border: 0.5px solid #fafafa; font-size: 14px; }
-.sunday, .special-date { color: #8d7665; font-weight: bold; }
-.special-date { color: #f5222d; position: relative; z-index: 2; }
-/* Container của ô ngày */
 .day-cell {
   height: 50px;
   display: flex;
@@ -177,105 +180,29 @@ img {
   border-right: 1px solid #f0f0f0;
 }
 
-/* Khung chứa trái tim và số */
-.heart-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
+/* Trái tim ngày 12 */
+.heart-wrapper { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
+.heart-icon { position: absolute; font-size: 35px; color: #ff4d4f; opacity: 0.25; z-index: 1; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.day-number { position: relative; z-index: 2; font-weight: bold; color: #d32f2f; font-size: 16px; }
+.sunday-text { color: #8d7665; font-weight: bold; }
 
-/* Icon trái tim làm nền */
-.heart-icon {
-  position: absolute;
-  font-size: 35px; /* Điều chỉnh kích thước trái tim */
-  color: #ff4d4f;
-  opacity: 0.25;
-  z-index: 1;
-  /* Nếu trái tim bị lệch lên xuống, dùng top/bottom để chỉnh */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+@keyframes blink { 0%, 100% { opacity: 0.1; } 50% { opacity: 0.6; } }
+.blinking { animation: blink 1.5s ease-in-out infinite; }
 
-/* Số nằm trên trái tim */
-.day-number {
-  position: relative;
-  z-index: 2;
-  font-weight: bold;
-  color: #d32f2f;
-  font-size: 16px;
-  line-height: 1;
-}
+/* Form Section */
+.confirm-section { margin-top: 40px; }
+.confirm-text { font-style: italic; color: #666; font-size: 14px; line-height: 1.6; margin-bottom: 20px; padding: 0 10px; }
+.form-container-box { background: #fff; padding: 30px 20px; border-radius: 25px; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05); border: 1px solid #f0f0f0; text-align: left; }
 
-.sunday-text {
-  color: #8d7665;
-  font-weight: bold;
+/* Ant Design Custom */
+.custom-input { border-radius: 20px !important; padding: 10px 15px !important; margin-bottom: 5px; }
+.custom-radio-group { display: flex; flex-direction: column; gap: 12px; padding: 10px 0; }
+.custom-submit-btn { 
+  width: 100%; height: 45px !important; border-radius: 25px !important; 
+  border: 1px solid #333 !important; font-weight: bold !important; 
+  text-transform: uppercase; margin-top: 10px; background: #fff !important; color: #333 !important;
 }
-/* Hiệu ứng nhấp nháy cho trái tim */
-@keyframes blink {
-  0% { opacity: 0.1; }   /* Mờ nhất */
-  50% { opacity: 0.6; }  /* Sáng nhất */
-  100% { opacity: 0.1; } /* Quay lại mờ */
-}
-
-.blinking {
-  animation: blink 1.5s ease-in-out infinite; /* Lặp lại vô hạn */
-}
-
-/* Bổ sung cho Form để đồng bộ với Lịch */
-.confirm-section {
-  margin-top: 40px;
-}
-
-.confirm-text {
-  font-style: italic;
-  color: #666;
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.form-container-box {
-  background: #fff;
-  padding: 30px 20px;
-  border-radius: 25px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
-  border: 1px solid #f0f0f0;
-  text-align: left;
-}
-
-.custom-input {
-  border-radius: 20px !important;
-  padding: 10px 15px !important;
-}
-
-.custom-radio-group {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 10px 0;
-}
-
-.custom-submit-btn {
-  width: 100%;
-  height: 45px !important;
-  border-radius: 25px !important;
-  border: 1px solid #333 !important;
-  font-weight: bold !important;
-  text-transform: uppercase;
-  margin-top: 10px;
-}
-
-/* Căn giữa Header Lịch */
-.header-artistic {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
+.custom-submit-btn:hover { background: #333 !important; color: #fff !important; }
 
 /* ===== ALBUM ===== */
 .album-section {
