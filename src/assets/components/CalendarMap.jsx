@@ -67,7 +67,7 @@ export default function CalendarMap() {
       const attendanceRef = ref(db, "responses");
       const newGuestRef = push(attendanceRef);
 
-      // 2. Đẩy dữ liệu khách nhập vào database
+      // 2. Đẩy dữ liệu khách nhập
       await set(newGuestRef, {
         name: values.name,
         message: values.message || "",
@@ -75,7 +75,7 @@ export default function CalendarMap() {
         createdAt: new Date().toLocaleString("vi-VN"), // Lưu ngày giờ gửi
       });
 
-      // 3. Hiệu ứng thành công: Rơi pháo hoa và xóa trắng ô nhập
+      //Hiệu ứng ơi pháo 
       setShowConfetti(false);
       setTimeout(() => setShowConfetti(true), 50);
       form.resetFields();
@@ -122,7 +122,7 @@ export default function CalendarMap() {
         </div>
       </div>
 
-      {/* --- PHẦN FORM XÁC NHẬN --- */}
+      {/* --- PHẦN FORM XÁC NHẬN -- */}
       <div className="confirm-section">
         <p className="confirm-text">
           Mỗi lời chúc, mỗi sự hiện diện đều là điều đáng quý mà chúng tôi luôn

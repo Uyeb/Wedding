@@ -91,66 +91,170 @@ img {
 
 .names {
   font-family: 'Allura', cursive;
-  font-size: 1.0rem;       /* Tăng kích thước tên (to hơn trước) */
-  color: #df4848;
+  font-size: 2.8rem;      /* Tăng mạnh từ 1.0 lên 2.8 */
+  color: #ba935c;
   margin: 0;
-  white-space: nowrap;     /* ÉP CHỮ TRÊN 1 HÀNG, không cho xuống dòng */
-  font-weight: 400;
+  font-weight: 200;
   white-space: nowrap;
+  line-height: 1.2;       /* Ép dòng sát lại để không đẩy dòng dưới đi quá xa */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Thêm chút bóng cho rõ chữ */
+}
+
+@media (max-width: 767px) {
+  .names {
+    font-size: 2.2rem !important; /* Đảm bảo trên mobile vẫn to rõ ràng */
+  }
+  
+  .hero-content p:not(.names) {
+    font-size: 0.6rem !important; /* Ép dòng chữ nhỏ bên dưới bé lại để tôn tên 2 bạn lên */
+    letter-spacing: 2px;          /* Giảm bớt giãn cách chữ để vừa màn hình điện thoại */
+  }
 }
 
 /* 3. Dòng chữ nhỏ bên dưới */
 .hero-content p:not(.names) {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.8rem;       /* Nhỏ gọn so với tên */
+  font-size: 0.6rem;       /* Nhỏ gọn so với tên */
   letter-spacing: 4px;     /* Giãn cách rộng cho sang */
   text-transform: uppercase;
   color: #605f5f;
   margin-top: 5px;         /* Khoảng cách giữa tên và dòng dưới */
 }
 
-/* ===== INFO (nhà trai / gái) ===== */
+/* ===== TỔNG THỂ INFO ===== */
+.info-container {
+  padding: 40px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
 .section h2 {
   font-family: 'Allura', cursive;
-  font-style: italic;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.6;
-  color: #444;
+  color: #2d2d2d;
+  margin-bottom: 30px;
 }
-.section h4{
-    margin-top: 40%;
+
+/* Khoảng cách các dòng thông tin bố mẹ */
+.parent {
+  margin-bottom: 4px !important;
+  font-weight: 450;
+  color: #333;
 }
+
+/* Địa chỉ mờ đi một chút như Uyên muốn */
+.address {
+  font-size: 12px;
+  color: #676565; /* Màu xám mờ */
+  margin-bottom: 0 !important;
+  line-height: 1.4;
+}
+
+.section h4 {
+  margin-top: 30px; /* Giảm khoảng cách 40% quá xa cũ */
+  font-size: 16px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Tên Sơn Hà & Thảo Uyên to và nổi bật */
 .name {
   font-family: 'Allura', cursive;
-  font-size: 24px;
-  margin-top: 5px;
-  color: #444;
+  font-size: 32px !important; /* Tăng size để to hơn chữ Chú rể/Cô dâu */
+  color: #4d4b4b; 
+  margin-top: 10px !important;
 }
 
-/* BOX nền hồng */
+/* ===== HIỆU ỨNG TRÁI TIM ĐẬP ===== */
+.heart-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 110px;
+}
+
+.heart-beat-icon {
+  color: #7d5146;
+  font-size: 20px;
+  animation: heartBeat 1.2s infinite;
+}
+
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.3); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.3); }
+  70% { transform: scale(1); }
+}
+
+/* ===== FIX LỖI ẢNH VÀ CHỮ TRÊN MOBILE ===== */
+@media (max-width: 767px) {
+  .section h2 { font-size: 20px; }
+  
+  .info-row {
+    align-items: flex-start;
+  }
+
+  .section p.parent {
+    font-size: 12px !important;
+    white-space: nowrap;
+  }
+
+  .address {
+    font-size: 10px !important;
+  }
+
+  .name {
+    font-size: 26px !important; 
+  }
+
+  .heart-col {
+    padding-top: 80px; 
+  }
+
+  /* BOX ẢNH HỒNG - SỬA LẠI ĐỂ ẢNH DÀI VÀ CAO HƠN */
+  .img-box-pink {
+    /* Tăng độ rộng lên 90-95% để ảnh to rõ, không bị bóp nghẹt */
+    max-width: 90% !important; 
+    margin: 20px auto !important;
+    box-sizing: border-box; /* Đảm bảo không tràn viền phải */
+  }
+  
+  .img-inner img {
+    /* Tăng height lên 250px hoặc 280px để ảnh trông "dài" và sang */
+    height: 270px !important; 
+    width: calc(50% - 4px);
+    object-fit: cover;
+    box-sizing: border-box;
+  }
+}
+
+/* BOX ẢNH NỀN NÂU HỒNG PC - GIỮ NGUYÊN */
 .img-box-pink {
-  padding: 10px; /* cách layout 10px */
-  background: #7d5146; /* màu hồng */
-  border-radius: 2px;
+  width: 100%;
+  max-width: 500px;
+  padding: 8px;
+  background: #7d5146;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+  margin: 0px 0px 20px 20px auto;
 }
 
-/* chứa 2 ảnh */
 .img-inner {
   display: flex;
-  gap: 4px; /* khoảng cách giữa 2 ảnh */
+  gap: 8px;
+  width: 100%;
 }
 
-/* mỗi ảnh */
 .img-inner img {
-  width: 50%;
-  border-radius: 10px;
-  padding: 4px; /* khoảng cách xung quanh ảnh */
+  width: calc(50% - 4px);
+  height: 350px;
+  object-fit: cover;
+  box-sizing: border-box;
 }
 
-/* ===== EVENT INTRO (3 ảnh) ===== */
-.section img {
-  border-radius: 10px;
-}
 
 /* ===== CALENDAR & MAP ===== */
 .wedding-wrapper { 
@@ -214,7 +318,7 @@ img {
 
 /* Header & Divider (giữ nguyên) */
 .album-header { text-align: center; margin-bottom: 25px; }
-.album-title { font-family: 'Dancing Script', cursive; font-style: italic; font-size: 26px; margin-bottom: 5px; }
+.album-title { font-family: 'Allura', cursive; font-style: italic; font-size: 26px; margin-bottom: 5px; }
 .title-divider { display: flex; align-items: center; justify-content: center; gap: 10px; }
 .title-divider .line { height: 1px; width: 100px; background: #ddd; }
 .title-divider .heart { font-size: 10px; color: #333; }
@@ -249,15 +353,99 @@ img {
   gap: 12px;
   height: 100%;
 }
-
-.horizontal {
-  /* Tính toán để 2 ảnh ngang + gap = 1 ảnh dọc */
-  padding-top: calc((133.33% - 12px) / 2);
-}
-
 /* 3. Ảnh to cuối cùng*/
 .full-vertical {
   padding-top: 150%; /* Tỷ lệ dọc dài 2:3, bạn có thể chỉnh 133.33% nếu muốn ngắn hơn */
+}
+/* ===== STYLE CHO BOX THANK YOU CUỐI CÙNG ===== */
+/* ===== TỐI ƯU TOÀN BỘ BOX THANK YOU: LÀM NỔI CHỮ BỊ CHÌM ===== */
+
+.thankyou-box {
+  position: relative; 
+  width: 100%;
+  height: 550px; 
+  overflow: hidden; 
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background: #fff; 
+}
+
+/* Ảnh nền mờ nhẹ*/
+.thankyou-box .background-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: blur(0.5px); 
+  -webkit-filter: blur(0.5px);
+  opacity: 0.7; 
+  transform: scale(1.1); 
+  transition: all 0.5s ease;
+}
+
+/* Lớp phủ Gradient (Overlay) - LÀM NỀN CHO CHỮ NỔI LÊN */
+.thankyou-box .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Phủ dải màu nâu trầm ở đáy để chữ trắng nổi lên */
+  background: linear-gradient(to top, rgba(60, 47, 32, 0.7) 0%, rgba(60, 47, 32, 0.2) 30%, transparent 60%);
+  z-index: 1;
+}
+
+/* KHỐI NỘI DUNG CHỮ ĐỀU LÊN GIỮA TÂM ẢNH */
+.thankyou-box .content {
+  position: absolute;
+  /* Thay vì dùng top: 50%, ta dùng bottom để đẩy xuống dưới */
+  bottom: 10%; /* Cách đáy 10% chiều cao ảnh để không bị sát mép */
+  left: 0;
+  
+  width: 100%;
+  background: transparent; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; 
+  padding: 0 20px;
+  text-align: center;
+  
+  /* Xóa bỏ transform translate cũ nếu còn để tránh bị lệch */
+  transform: none; 
+}
+
+/* Chữ "Thank you!" - NÂNG TÔNG Gold SÁNG VÀ THÊM BÓNG */
+.thankyou-box .script-text {
+  font-family: 'Allura', cursive;
+  font-size: 3.2rem; 
+  color: #302f2f; /* Màu vàng đồng (Gold) sáng hơn để nổi bật */
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.1;
+  /* Đổ bóng chữ đậm hơn để tách biệt chữ với nền ảnh sáng */
+  text-shadow: 2px 2px 8px rgba(172, 168, 168, 0.5); 
+}
+
+/* Đoạn text cảm ơn - CHUYỂN SANG MÀU TRẮNG VÀ THÊM BÓNG ĐẬM */
+.thankyou-box .main-text {
+  font-family: 'Segoe UI', sans-serif; 
+  font-size: 0.9rem; 
+  color: #302f2f; /* <--- CHUYỂN SANG MÀU TRẮNG ĐỂ NỔI BẬT */
+  line-height: 1.5; 
+  max-width: 80%;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  /* Đổ bóng đen mờ đậm xung quanh chữ trắng */
+  text-shadow: 2px 2px 5px rgba(156, 147, 147, 0.8);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .thankyou-box { height: 480px; }
+  .thankyou-box .script-text { font-size: 2.8rem; }
+  .thankyou-box .main-text { font-size: 0.8rem; max-width: 90%; }
 }
 
 

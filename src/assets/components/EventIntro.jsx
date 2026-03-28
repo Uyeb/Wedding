@@ -77,10 +77,9 @@ export default function EventIntro() {
   return (
     <section className="section" style={{ background: '#fcfcfc', padding: '40px 10px' }}>
       
-      <div style={{ textAlign: 'center', marginBottom: '30px' }}>
-        <h2 data-aos="fade-up">Trân trọng kính mời</h2>
-        <p>....................................</p>
-        <p data-aos="fade-up" style={{ fontWeight: '500' }}>Tham dự lễ cưới Sơn Hà & Thảo Uyên</p>
+      <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+        <h2 data-aos="fade-up" style={{ fontWeight: '550', fontSize: '34px', marginBottom: '0px'}}>Thư mời</h2>
+        <p data-aos="fade-up" style={{ fontWeight: '300' }}>Tham dự lễ cưới Sơn Hà & Thảo Uyên</p>
       </div>
 
       {/* --- PHẦN 3 ẢNH ĐÃ CÂN ĐỐI --- */}
@@ -103,21 +102,21 @@ export default function EventIntro() {
 
       {/* --- BOX LỄ VU QUY --- */}
       <div style={eventBoxStyle}>
-        <h2 style={{ color: '#d32f2f', marginBottom: '5px' }}>LỄ VU QUY</h2>
+        <h2 style={{ color: '#d32f2f', marginBottom: '8px' }}>LỄ VU QUY</h2>
         <p style={{ color: '#888', fontSize: '0.85rem' }}>Tại Tư Gia Nhà Gái</p>
-        <p style={{ fontSize: '1.1rem', fontWeight: '500' }}>Vào lúc 09h00 | Chủ Nhật</p>
+        <p style={{ fontSize: '1.1rem', fontWeight: '400' }}>Vào lúc 09h00 | Chủ Nhật</p>
 
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0' }}>
           <div>
             <div style={{ color: '#666', fontSize: '0.9rem' }}>Tháng</div>
-            <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>04</div>
+            <div style={{ fontSize: '1.5rem', fontWeight: '450' }}>04</div>
           </div>
           <div style={separatorStyle}></div>
           <div style={dayNumberStyle}>12</div>
           <div style={separatorStyle}></div>
           <div>
             <div style={{ color: '#666', fontSize: '0.9rem' }}>Năm</div>
-            <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>2026</div>
+            <div style={{ fontSize: '1.5rem', fontWeight: '450' }}>2026</div>
           </div>
         </div>
         
@@ -142,19 +141,19 @@ export default function EventIntro() {
       <div style={eventBoxStyle}>
         <h2 style={{ color: '#d32f2f', marginBottom: '5px' }}>LỄ THÀNH HÔN</h2>
         <p style={{ color: '#888', fontSize: '0.85rem' }}>Tại Tư Gia Nhà Trai</p>
-        <p style={{ fontSize: '1.1rem', fontWeight: '500' }}>Vào lúc 09h00 | Chủ Nhật</p>
+        <p style={{ fontSize: '1.1rem', fontWeight: '400' }}>Vào lúc 09h00 | Chủ Nhật</p>
 
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0' }}>
           <div>
             <div style={{ color: '#666', fontSize: '0.9rem' }}>Tháng</div>
-            <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>04</div>
+            <div style={{ fontSize: '1.5rem', fontWeight: '450' }}>04</div>
           </div>
           <div style={separatorStyle}></div>
           <div style={dayNumberStyle}>12</div>
           <div style={separatorStyle}></div>
           <div>
             <div style={{ color: '#666', fontSize: '0.9rem' }}>Năm</div>
-            <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>2026</div>
+            <div style={{ fontSize: '1.5rem', fontWeight: '450' }}>2026</div>
           </div>
         </div>
 

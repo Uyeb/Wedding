@@ -46,11 +46,25 @@ export default function Album() {
           </Col>
         ))}
 
-        {/* Ảnh to dọc cuối cùng theo ý bạn */}
+        {/* --- KHỐI "THANK YOU" TO DỌC CUỐI CÙNG (Sửa cấu trúc mới) --- */}
         <Col span={24}>
-           <div className="img-box full-vertical" data-aos="fade-up">
-              <img src="/Wedding/images/anh1.jpg" alt="wedding large" />
-           </div>
+            {/* Vẫn dùng thankyou-box làm container chính */}
+            <div className="thankyou-box" data-aos="fade-up">
+              {/* Ảnh nền phủ kín, VẪN SÁNG VÀ RÕ NÉT */}
+              <img src="/Wedding/images/anh12.jpg" alt="wedding background" className="background-img" />
+              
+              {/* Lớp phủ sương mờ ảo (Smoky Blur Overlay) - Chỉ mờ ở vùng chứa chữ */}
+              <div className="shadow-overlay"></div>
+              
+              {/* Chỉ để chữ đè lên ảnh nền, KHÔNG DÙNG BOX TRẮNG NỮA */}
+              <div className="content">
+                <p className="script-text">Thank you!</p>
+                <p className="main-text">
+                    "Cảm ơn bạn đã dành tình cảm cho chúng mình!
+                    Sự hiện diện của bạn là món quà ý nghĩa nhất."
+                </p>
+              </div>
+            </div>
         </Col>
       </Row>
     </section>
