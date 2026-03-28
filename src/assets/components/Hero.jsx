@@ -7,8 +7,8 @@ export default function Hero() {
           alt="wedding" 
           className="hero-img"
         />
-        <div className="hero-content">
-          <p className="names">Sơn Hà & Thảo Uyên</p>
+        <div data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-duration="1500"  className="hero-content">
+          <p  className="names">Sơn Hà & Thảo Uyên</p>
           <p className="sub-text">we are getting married</p>
         </div>
       </div>

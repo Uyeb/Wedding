@@ -1,0 +1,31 @@
+/* Hiệu ứng cho phần đầu tiên (Hero) */
+.first-load {
+  opacity: 0;
+  transform: translateY(30px);
+  /* Chỉnh 1.5s thành 2s hoặc 2.5s để chậm lại */
+  transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+
+.first-load.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tùy chỉnh thêm cho mượt mà (Optional) */
+[data-aos] {
+  pointer-events: none;
+}
+[data-aos].aos-animate {
+  pointer-events: auto;
+}
+
+/* Đảm bảo toàn bộ app không bị nhảy và trượt mượt mà */
+.app-bg {
+  overflow-x: hidden;
+  scroll-behavior: smooth; /* Cho hiệu ứng cuộn tự nhiên */
+}
+
+/* Ẩn các phần tử AOS trước khi chúng thực sự animate */
+[data-aos] {
+  transition-property: transform, opacity !important;
+}

@@ -78,7 +78,7 @@ export default function EventIntro() {
     <section className="section" style={{ background: '#fcfcfc', padding: '40px 10px' }}>
       
       <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-        <h2 data-aos="fade-up" style={{ fontWeight: '550', fontSize: '34px', marginBottom: '0px'}}>Thư mời</h2>
+        <h2  data-aos="zoom-in" style={{ fontWeight: '550', fontSize: '34px', marginBottom: '0px'}}>Thư mời</h2>
         <p data-aos="fade-up" style={{ fontWeight: '300' }}>Tham dự lễ cưới Sơn Hà & Thảo Uyên</p>
       </div>
 
@@ -102,11 +102,11 @@ export default function EventIntro() {
 
       {/* --- BOX LỄ VU QUY --- */}
       <div style={eventBoxStyle}>
-        <h2 style={{ color: '#d32f2f', marginBottom: '8px' }}>LỄ VU QUY</h2>
-        <p style={{ color: '#888', fontSize: '0.85rem' }}>Tại Tư Gia Nhà Gái</p>
-        <p style={{ fontSize: '1.1rem', fontWeight: '400' }}>Vào lúc 09h00 | Chủ Nhật</p>
+        <h2 data-aos="zoom-in" style={{ color: '#d32f2f', marginBottom: '8px' }}>LỄ VU QUY</h2>
+        <p data-aos="zoom-in" style={{ color: '#888', fontSize: '0.85rem' }}>Tại Tư Gia Nhà Gái</p>
+        <p data-aos="zoom-in" style={{ fontSize: '1.1rem', fontWeight: '400' }}>Vào lúc 09h00 | Chủ Nhật</p>
 
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0' }}>
+        <div data-aos="zoom-in" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0' }}>
           <div>
             <div style={{ color: '#666', fontSize: '0.9rem' }}>Tháng</div>
             <div style={{ fontSize: '1.5rem', fontWeight: '450' }}>04</div>
@@ -120,11 +120,11 @@ export default function EventIntro() {
           </div>
         </div>
         
-        <p style={{ fontStyle: 'italic', color: '#999', fontSize: '0.85rem' }}>(Tức Ngày 25 Tháng 02 Năm Bính Ngọ)</p>
+        <p data-aos="fade-up" style={{ fontStyle: 'italic', color: '#999', fontSize: '0.85rem' }}>(Tức Ngày 25 Tháng 02 Năm Bính Ngọ)</p>
 
-        <a href={googleMapsUrl(addressGai)} target="_blank" rel="noreferrer" style={mapBtnStyle}>
+        <a data-aos="fade-up" href={googleMapsUrl(addressGai)} target="_blank" rel="noreferrer" style={mapBtnStyle}>
           <EnvironmentOutlined style={{ fontSize: '1.2rem', marginRight: '5px' }} />
-          <span style={{ borderBottom: '1px solid #d32f2f' }}>CHỈ ĐƯỜNG</span>
+          <span  style={{ borderBottom: '1px solid #d32f2f' }}>CHỈ ĐƯỜNG</span>
         </a>
       </div>
 
@@ -139,11 +139,11 @@ export default function EventIntro() {
 
       {/* --- BOX LỄ THÀNH HÔN --- */}
       <div style={eventBoxStyle}>
-        <h2 style={{ color: '#d32f2f', marginBottom: '5px' }}>LỄ THÀNH HÔN</h2>
-        <p style={{ color: '#888', fontSize: '0.85rem' }}>Tại Tư Gia Nhà Trai</p>
-        <p style={{ fontSize: '1.1rem', fontWeight: '400' }}>Vào lúc 09h00 | Chủ Nhật</p>
+        <h2 data-aos="zoom-in" style={{ color: '#d32f2f', marginBottom: '5px' }}>LỄ THÀNH HÔN</h2>
+        <p data-aos="zoom-in" style={{ color: '#888', fontSize: '0.85rem' }}>Tại Tư Gia Nhà Trai</p>
+        <p data-aos="zoom-in" style={{ fontSize: '1.1rem', fontWeight: '400' }}>Vào lúc 09h00 | Chủ Nhật</p>
 
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0' }}>
+        <div data-aos="zoom-in" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0' }}>
           <div>
             <div style={{ color: '#666', fontSize: '0.9rem' }}>Tháng</div>
             <div style={{ fontSize: '1.5rem', fontWeight: '450' }}>04</div>
@@ -157,9 +157,9 @@ export default function EventIntro() {
           </div>
         </div>
 
-        <p style={{ fontStyle: 'italic', color: '#999', fontSize: '0.85rem' }}>(Tức Ngày 25 Tháng 02 Năm Bính Ngọ)</p>
+        <p data-aos="fade-up" style={{ fontStyle: 'italic', color: '#999', fontSize: '0.85rem' }}>(Tức Ngày 25 Tháng 02 Năm Bính Ngọ)</p>
 
-        <a href={googleMapsUrl(addressTrai)} target="_blank" rel="noreferrer" style={mapBtnStyle}>
+        <a data-aos="fade-up" href={googleMapsUrl(addressTrai)} target="_blank" rel="noreferrer" style={mapBtnStyle}>
           <EnvironmentOutlined style={{ fontSize: '1.2rem', marginRight: '5px' }} />
           <span style={{ borderBottom: '1px solid #d32f2f' }}>CHỈ ĐƯỜNG</span>
         </a>

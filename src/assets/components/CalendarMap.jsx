@@ -124,7 +124,7 @@ export default function CalendarMap() {
 
       {/* --- PHẦN FORM XÁC NHẬN -- */}
       <div className="confirm-section">
-        <p className="confirm-text">
+        <p data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-duration="1500" className="confirm-text">
           Mỗi lời chúc, mỗi sự hiện diện đều là điều đáng quý mà chúng tôi luôn
           trân trọng. Cảm ơn vì bạn đã là một phần trong ngày đặc biệt này 💌
         </p>
