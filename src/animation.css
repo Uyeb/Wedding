@@ -29,3 +29,35 @@
 [data-aos] {
   transition-property: transform, opacity !important;
 }
+
+
+@keyframes spinLoa {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.music-control-btn {
+  width: 42px;
+  height: 42px;
+  background: white !important;
+  border: 1.5px solid #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Luôn hiện Icon */
+  opacity: 1; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Chỉ xoay khi nhạc đang phát */
+.music-control-btn.playing {
+  animation: spinLoa 4s linear infinite;
+  
+}
+
+/* Khi dừng (mới load trang) thì đứng im và mờ nhẹ */
+.music-control-btn.paused {
+  opacity: 0.5;
+  transform: rotate(0deg);
+}

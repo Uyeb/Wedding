@@ -3,34 +3,34 @@ import { EnvironmentOutlined } from '@ant-design/icons';
 
 export default function EventIntro() {
   
-  const addressGai = "Số nhà..., Đường..., Quận..., Thành phố..."; 
-  const addressTrai = "Số nhà..., Đường..., Quận..., Thành phố...";
+  const addressGai = "20°36'53.1\"N 106°33'22.2\"E";
+  const addressTrai = "20°39'57.7\"N 106°27'08.3\"E";
   const animatedGifUrl = "/Wedding/images/anhchibi.gif"; 
 
-  const googleMapsUrl = (address) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+  const googleMapsUrl = (address) => `https://www.google.com/maps?q=${encodeURIComponent(address)}`;
 
   // --- STYLE CHO PHẦN NGÀY THÁNG ---
   const dayNumberStyle = {
-    fontSize: '4rem',
+    fontSize: '3.2rem',
     color: '#d32f2f',
-    fontWeight: 'bold',
+    fontWeight: '450',
     lineHeight: '1',
     margin: '0 10px'
   };
 
   const separatorStyle = {
     borderLeft: '1px solid #ccc',
-    height: '50px',
-    margin: '0 15px',
+    height: '40px',
+    margin: '0 12px',
     alignSelf: 'center'
   };
 
   const eventBoxStyle = {
     background: '#fff', 
-    padding: '35px 20px', 
+    padding: '30px 15px', 
     borderRadius: '15px', 
     boxShadow: '0px 2px 10px rgba(84, 81, 81, 0.3)', 
-    maxWidth: '450px', 
+    maxWidth: '380px', 
     margin: '20px auto', 
     textAlign: 'center',
     border: '1px solid #eee'
@@ -40,7 +40,7 @@ export default function EventIntro() {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
-    color: '#d32f2f',
+    color: '#ed5757',
     textDecoration: 'none',
     marginTop: '15px',
     fontSize: '0.9rem',
@@ -100,11 +100,60 @@ export default function EventIntro() {
         </div>
       </div>
 
+      <div style={{ textAlign: 'center'}}>
+        <h4 data-aos="zoom-in" style={{ 
+          color: '#000', 
+          marginBottom: '15px', 
+          fontSize: '1.8rem', 
+          fontWeight: '500',
+          letterSpacing: '2px' 
+        }}>
+          BỮA CƠM THÂN MẬT
+        </h4>
+        
+        <p data-aos="zoom-in" style={{ 
+          fontSize: '1.2rem', 
+          fontWeight: '400', 
+          marginBottom: '5px',
+          color: '#333'
+        }}>
+          CHỦ NHẬT | 08H30
+        </p>
+
+        {/* Số ngày tháng to, đậm chuẩn theo mẫu */}
+        <div data-aos="zoom-in" style={{ 
+          fontSize: '2.0rem', 
+          fontWeight: '600', 
+          letterSpacing: '5px',
+          margin: '10px 0',
+          color: '#000'
+        }}>
+          12.04.2026
+        </div>
+
+        <p data-aos="fade-up" style={{ 
+          fontStyle: 'italic', 
+          color: '#666', 
+          fontSize: '1rem',
+          marginBottom: '10px'
+        }}>
+          (Tức Ngày 25 Tháng 02 Năm Bính Ngọ)
+        </p>
+
+        <p data-aos="fade-up" style={{ 
+          fontSize: '1.1rem', 
+          fontWeight: '500',
+          color: '#333'
+        }}>
+          Tại Tư Gia Nhà Gái
+        </p>
+      </div>
+
       {/* --- BOX LỄ VU QUY --- */}
       <div style={eventBoxStyle}>
-        <h2 data-aos="zoom-in" style={{ color: '#d32f2f', marginBottom: '8px' }}>LỄ VU QUY</h2>
-        <p data-aos="zoom-in" style={{ color: '#888', fontSize: '0.85rem' }}>Tại Tư Gia Nhà Gái</p>
-        <p data-aos="zoom-in" style={{ fontSize: '1.1rem', fontWeight: '400' }}>Vào lúc 09h00 | Chủ Nhật</p>
+        <h2 data-aos="zoom-in" style={{ color: '#d32f2f', marginBottom: '5px', fontSize: '2.5rem' }}>LỄ VU QUY</h2>
+        <p data-aos="zoom-in" style={{ color: '#888', fontSize: '0.95rem' }}>Tại Tư Gia Nhà Gái</p>
+        <p data-aos="zoom-in" style={{ fontSize: '1.1rem', fontWeight: '400' }}>Vào lúc 11h30 | Chủ Nhật</p>
 
         <div data-aos="zoom-in" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0' }}>
           <div>
@@ -137,10 +186,60 @@ export default function EventIntro() {
         />
       </div>
 
+
+      <div style={{ textAlign: 'center'}}>
+        <h4 data-aos="zoom-in" style={{ 
+          color: '#000', 
+          marginBottom: '15px', 
+          fontSize: '1.8rem', 
+          fontWeight: '500',
+          letterSpacing: '2px' 
+        }}>
+          BỮA CƠM THÂN MẬT
+        </h4>
+        
+        <p data-aos="zoom-in" style={{ 
+          fontSize: '1.2rem', 
+          fontWeight: '400', 
+          marginBottom: '5px',
+          color: '#333'
+        }}>
+          CHỦ NHẬT | 08H30
+        </p>
+
+        {/* Số ngày tháng to, đậm chuẩn theo mẫu */}
+        <div data-aos="zoom-in" style={{ 
+          fontSize: '2.0rem', 
+          fontWeight: '600', 
+          letterSpacing: '5px',
+          margin: '10px 0',
+          color: '#000'
+        }}>
+          12.04.2026
+        </div>
+
+        <p data-aos="fade-up" style={{ 
+          fontStyle: 'italic', 
+          color: '#666', 
+          fontSize: '1rem',
+          marginBottom: '10px'
+        }}>
+          (Tức Ngày 25 Tháng 02 Năm Bính Ngọ)
+        </p>
+
+        <p data-aos="fade-up" style={{ 
+          fontSize: '1.1rem', 
+          fontWeight: '500',
+          color: '#333'
+        }}>
+          Tại Tư Gia Nhà Trai
+        </p>
+      </div>
+
       {/* --- BOX LỄ THÀNH HÔN --- */}
       <div style={eventBoxStyle}>
-        <h2 data-aos="zoom-in" style={{ color: '#d32f2f', marginBottom: '5px' }}>LỄ THÀNH HÔN</h2>
-        <p data-aos="zoom-in" style={{ color: '#888', fontSize: '0.85rem' }}>Tại Tư Gia Nhà Trai</p>
+        <h2 data-aos="zoom-in" style={{ color: '#d32f2f', marginBottom: '5px', fontSize: '2.5rem' }}>LỄ THÀNH HÔN</h2>
+        <p data-aos="zoom-in" style={{ color: '#888', fontSize: '0.95rem' }}>Tại Tư Gia Nhà Trai</p>
         <p data-aos="zoom-in" style={{ fontSize: '1.1rem', fontWeight: '400' }}>Vào lúc 09h00 | Chủ Nhật</p>
 
         <div data-aos="zoom-in" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0' }}>

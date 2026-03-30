@@ -102,7 +102,7 @@ img {
 
 @media (max-width: 767px) {
   .names {
-    font-size: 2.2rem !important; /* Đảm bảo trên mobile vẫn to rõ ràng */
+    font-size: 2.8rem !important; /* Đảm bảo trên mobile vẫn to rõ ràng */
   }
   
   .hero-content p:not(.names) {
@@ -172,7 +172,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 110px;
+  padding-top: 120px;
 }
 
 .heart-beat-icon {
@@ -224,7 +224,7 @@ img {
   
   .img-inner img {
     /* Tăng height lên 250px hoặc 280px để ảnh trông "dài" và sang */
-    height: 270px !important; 
+    height: 300px !important; 
     width: calc(50% - 4px);
     object-fit: cover;
     box-sizing: border-box;
@@ -250,7 +250,7 @@ img {
 
 .img-inner img {
   width: calc(50% - 4px);
-  height: 350px;
+  height: 360px;
   object-fit: cover;
   box-sizing: border-box;
 }
@@ -318,7 +318,7 @@ img {
 
 /* Header & Divider (giữ nguyên) */
 .album-header { text-align: center; margin-bottom: 25px; }
-.album-title { font-family: 'Allura', cursive; font-style: italic; font-size: 26px; margin-bottom: 5px; }
+.album-title { font-family: 'Allura', cursive; font-style: italic; font-size: 32px; margin-bottom: 5px; }
 .title-divider { display: flex; align-items: center; justify-content: center; gap: 10px; }
 .title-divider .line { height: 1px; width: 100px; background: #ddd; }
 .title-divider .heart { font-size: 10px; color: #333; }
@@ -357,8 +357,9 @@ img {
 .full-vertical {
   padding-top: 150%; /* Tỷ lệ dọc dài 2:3, bạn có thể chỉnh 133.33% nếu muốn ngắn hơn */
 }
+
+
 /* ===== STYLE CHO BOX THANK YOU CUỐI CÙNG ===== */
-/* ===== TỐI ƯU TOÀN BỘ BOX THANK YOU: LÀM NỔI CHỮ BỊ CHÌM ===== */
 
 .thankyou-box {
   position: relative; 
@@ -437,8 +438,7 @@ img {
   max-width: 80%;
   font-weight: 400;
   letter-spacing: 0.5px;
-  /* Đổ bóng đen mờ đậm xung quanh chữ trắng */
-  text-shadow: 2px 2px 5px rgba(156, 147, 147, 0.8);
+  text-shadow: 2px 2px 5px rgba(156, 151, 151, 0.8);
 }
 
 /* Mobile */
